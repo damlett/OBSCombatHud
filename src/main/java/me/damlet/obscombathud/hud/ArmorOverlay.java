@@ -8,6 +8,10 @@ import net.minecraft.item.Equipment;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
 import static java.lang.Math.min;
 
 public class ArmorOverlay {
@@ -62,7 +66,12 @@ public class ArmorOverlay {
         int totalDurability = 0;
         int numArmor = 0;
 
-        for (ItemStack stack : player.getInventory().main) {
+        Collection<ItemStack> items = new ArrayList<>();
+        items.addAll(player.getInventory().main);
+        items.addAll(player.getInventory().armor);
+        items.addAll(player.getInventory().offHand);
+
+        for (ItemStack stack : items) {
             if (stack.getItem() instanceof Equipment && stack.isDamageable()) {
                 int durability = stack.getMaxDamage() - stack.getDamage();
                 totalDurability += durability;
