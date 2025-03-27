@@ -1,0 +1,18 @@
+{
+  "config.title": "Combat hud config screen",
+
+  "config.saturationvisible": "Saturation visible",
+  "config.armorvisible": "Armor visible",
+  "config.spacing": "Spacing",
+  "config.offset_x": "X Offset",
+  "config.offset_y": "Y Offset",
+  "config.color": "Color",
+  "config.medium_color": "Medium Color",
+  "config.low_color": "Low Color",
+  "config.shadow": "Shadow",
+
+  "obs_overlay.component.armor_hud": "Armor hud",
+  "obs_overlay.component.armor_hud.tooltip": "Armor hud",
+  "obs_overlay.component.saturation_hud": "Saturation hud",
+  "obs_overlay.component.saturation_hud.tooltip": "Saturation hud"
+}

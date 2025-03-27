@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "obscombathud",
+  "version": "${version}",
+
+  "name": "OBSCombatHud",
+  "description": "",
+  "authors": [
+    "damlet"
+  ],
+  "contact": {
+    "repo": "https://github.com/damlett/OBSCombatHud"
+  },
+
+  "license": "Unlicense",
+  "icon": "assets/obscombathud/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "me.damlet.obscombathud.client.OBSCombatHudClient"
+    ],
+    "modmenu": [
+      "me.damlet.obscombathud.config.CombatHudModMenu"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "obs-armor-hud.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.19",
+    "fabric": "*",
+    "minecraft": ">=1.19",
+    "obs_overlay": ">=1.2.5",
+    "cloth-config": ">=15.0.140"
+  }
+}
